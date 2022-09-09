@@ -1,6 +1,6 @@
 /*
- * File: 1-Muhammad Abubakar
- * Auth: Brennan D Baraban
+ * File: 1-last_digit.c
+ * Auth: penn1084
  */
 
 #include <stdlib.h>

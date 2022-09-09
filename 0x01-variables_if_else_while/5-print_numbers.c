@@ -1,6 +1,6 @@
 /*
  * File: 5-print_numbers.c
- * Auth: Muhammad Abubakar
+ * Auth: penn1084
  */
 
 #include <stdio.h>
