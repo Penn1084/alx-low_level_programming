@@ -5,7 +5,6 @@
 * Return: 0
 * Auth: Muhammad Abubakar
 */
-
 int main(void)
 {
  _putchar('_');
