@@ -1,7 +1,7 @@
 /*
  * File: 1-swap.c
  * Auth: Muhammad Abubakar
- * */
+ */
 
 #include "main.h"
 
