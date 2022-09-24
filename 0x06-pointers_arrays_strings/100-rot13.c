@@ -1,26 +1,36 @@
-/*
- * File: 101-print_number.c
- * Auth: Muhammad Abubakar
- */
-
 #include "main.h"
 
+#include <stdio.h>
+
 /**
- * print_number - Prints an integer.
- * @n: The integer to be printed.
+ *   * rot13 - ...
+ *
+ *     * @s: ...
+ *
+ *       *
+ *
+ *         * Return: ...
+ *
  */
-void print_number(int n)
+
+char *rot13(char *s)
+
 {
-	unsigned int num = n;
+	int a = 0;
 
-	if (n < 0)
+	while (s[a])
 	{
-		_putchar('-');
-		num = -num;
+		while ((s[a] >= 'a' && s[a] <= 'z') || (s[a] >= 'A' && s[a] <= 'Z'))
+		{
+			if ((s[a] > 'm' && s[a] <= 'z') || (s[a] > 'M' && s[a] <= 'Z'))
+			{
+				s[a] -= 13;
+				break;
+			}
+				s[a] += 13;
+				break;
+		}
+		a++;
 	}
-
-	if ((num / 10) > 0)
-		print_number(num / 10);
-
-	_putchar((num % 10) + '0');
+	return (s);
 }
