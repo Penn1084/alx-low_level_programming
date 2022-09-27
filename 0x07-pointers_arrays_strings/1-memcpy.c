@@ -1,8 +1,3 @@
-/*
- * File: 1-memcpy.c
- * Auth: Muhammad Abubakar
- */
-
 #include "main.h"
 
 /**
