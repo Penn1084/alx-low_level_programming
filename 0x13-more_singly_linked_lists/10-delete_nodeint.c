@@ -1,42 +1,37 @@
 #include "lists.h"
+
 /**
- * delete_nodeint_at_index - Entry Point
- * @head: head
- * @index: index
- * Return: 0
+ * delete_nodeint_at_index - deletes the node at the index of listint.
+ * @head: data type pointer the head/next node
+ * @index: data type unsigned int index
+ * Return: 1 if succed and -1 if fail
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	unsigned int count = 0;
+	unsigned int counter = 0;
+	listint_t *tmp_node = *head;
+	listint_t *idx_node;
 
-	listint_t *copy;
-	listint_t *temp;
-
-	if (*head == NULL)
-		return (-1);
-
-	copy = *head;
-
-	if (index == 0)
+	if (tmp_node && (!index))
 	{
-		temp = copy->next;
-		free(copy);
-		*head = temp;
+		*head = tmp_node->next;
+		free(tmp_node);
 		return (1);
 	}
-
-	while (copy != NULL)
+	while (tmp_node)
 	{
-		if (count + 1 == index)
+		if (counter + 1 == index)
 		{
-			temp = copy->next;
-			copy->next = temp->next;
-			free(temp);
-			return (1);
+			idx_node = tmp_node->next;
+			if (idx_node)
+			{
+				tmp_node->next = idx_node->next;
+				free(idx_node);
+				return (1);
+			}
 		}
-		if (copy->next != NULL)
-			copy = copy->next;
-		count++;
+		tmp_node = tmp_node->next;
+		counter++;
 	}
 	return (-1);
 }
